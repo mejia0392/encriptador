@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    background-color: #f1faee;
+    color: #1d3557;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1d3557;
+  }
+
+  .tomas_y_mili {
+    color: #e63946;
+  }
+
+  .texto_advertencia {
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    color: #1d3557;
+  }
+
+  .principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .principal_inserta_texto_botones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .boton_encriptar {
+    width: 200px;
+    background-color: #e63946;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    color: #a8dadc;
+    text-decoration: none;
+    border: 2px solid #457b9d;
+  }
+
+  .boton_encriptar:hover {
+    background-color: #ed8089;
+    cursor: pointer;
+  }
+
+  .boton_desencriptar {
+    width: 200px;
+    background-color: #ed8089;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    color: #a8dadc;
+    text-decoration: none;
+    border: 2px solid #457b9d;
+  }
+
+  .boton_desencriptar:hover {
+    background-color: #e63946;
+    cursor: pointer;
+  }
+
+  .inserta_texto {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer {
+    background-color:#a8dadc;
+    color: #457b9d;
+    padding: 24px;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+  }
