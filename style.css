@@ -1,19 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body {
-    background-color: #f1faee;
+    background-color: #1d3557;
     color: #1d3557;
-    font-family: 'Comic Sans MS', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
     height: 100vh;
     box-sizing: border-box;
+    height: 100%;
+  }
+
+  .header {
+    padding: 2% 0 0 6%;
+  }
+
+  .header_menu {
+    display: flex;
+    gap: 50px;
+  }
+
+  .header_menu_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
   }
 
   h1 {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #1d3557;
+    color: #a8dadc;
+    padding: 1% 0 0 0;
+    text-align: center;
+    margin: 0%;
   }
 
   .tomas_y_mili {
@@ -24,25 +43,30 @@ body {
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
     color: #1d3557;
+    padding: 2px;
+    margin: 0%;
   }
 
   .principal {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    gap: 5px;
+    padding: 2% 5%;
+    margin-top: 0.5%;
   }
 
   .principal_inserta_texto_botones {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5px;
   }
 
   .boton_encriptar {
     width: 200px;
-    background-color: #e63946;
+    background-color: #457b9d;
     text-align: center;
-    padding: 21.5px 0;
+    padding: 4px 0;
     border-radius: 10px;
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
@@ -54,27 +78,27 @@ body {
   }
 
   .boton_encriptar:hover {
-    background-color: #ed8089;
+    background-color: #5a94b8;
     cursor: pointer;
   }
 
   .boton_desencriptar {
     width: 200px;
-    background-color: #ed8089;
+    background-color: #f1faee;
     text-align: center;
-    padding: 21.5px 0;
+    padding: 4px 0;
     border-radius: 10px;
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
-    color: #a8dadc;
+    color: #e63946;
     text-decoration: none;
     border: 2px solid #457b9d;
   }
 
   .boton_desencriptar:hover {
-    background-color: #e63946;
+    background-color: #a8dadc;
     cursor: pointer;
   }
 
@@ -82,16 +106,73 @@ body {
     width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 4px;
   }
 
   .footer {
-    background-color:#a8dadc;
-    color: #457b9d;
-    padding: 24px;
+    background-color:#023e8a;
+    color: #48cae4;
+    padding: 2px;
     text-align: center;
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
     font-weight: 600;
+    margin: auto 0%;
     font-size: 25px;
+    height: 90px;
+  }
+
+  .caja_de_texto {
+    height: 250px;
+    border-radius: 10px;
+    resize: none;
+    padding: 0%;
+  }
+
+  .muestra_texto {
+    height: 250px;
+    border-radius: 10px;
+    background-color:#457b9d;
+    width: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4px;
+  }
+
+  .boton_copiar {
+    width: 200px;
+    background-color: #2a9d8f;
+    text-align: center;
+    padding: 4px 0;
+    border-radius: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    color: #cdeae5;
+    text-decoration: none;
+    border: 2px solid #457b9d;
+  }
+
+  .container_muestra_texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  ::placeholder {
+    font-size: 20px;
+  }
+
+  textarea {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+  }
+
+  #muestra_texto {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+    height: 100%;
+    margin: 0%;
+    color: #000;
   }

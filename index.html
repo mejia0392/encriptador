@@ -18,22 +18,28 @@
         <h1>¡Bienvenidos al encriptador de texto de <strong class="tomas_y_mili">Tomás y Mili!</strong></h1>
         <section class="principal">
             <div class="inserta_texto">
-                <input type="text" class="caja_de_texto">
+                <textarea id="texto_recibido" class="caja_de_texto" placeholder="Texto a encriptar"></textarea>
                 <p class="texto_advertencia">Introduce un texto en minúsculas. ¡No uses tildes ni caracteres especiales!</p>
                 <div class="principal_inserta_texto_botones">
-                    <button class="boton_encriptar">Encriptar</button>
-                    <button class="boton_desencriptar">Desecriptar</button>
+                    <button onclick="encriptar();" class="boton_encriptar">Encriptar</button>
+                    <button onclick="desencriptar();" class="boton_desencriptar">Desencriptar</button>
                 </div>
             </div>
 
-            <div class="muestra_texto">
-                <button class="boton_copiar">Copiar</button>
+            <div class="container_muestra_texto">
+                <div class="muestra_texto">
+                    <p id="muestra_texto"></p>
+                </div>
+                <button onclick="copiarTexto();" class="boton_copiar">Copiar texto</button>
             </div>
+            
         </section>
     </main>
 
     <footer class="footer">
-        <p>Dessarrollado por David Mejía.</p>
+        <p class="texto_footer">Desarrollado por David Mejía.</p>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
