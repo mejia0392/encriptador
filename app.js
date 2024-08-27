@@ -69,5 +69,22 @@ function copiarTexto() {
     alert('Contenido copiado en el portapapeles');
 }
 
+function validarTexto () {
+  const textoIntroducido = 'Hola';
+
+
+  console.log(textoIntroducido)
+
+  const isLowerCase = textoIntroducido => /^(?=[a-z])[a-z\s]+$/.test(textoIntroducido);
+
+  console.log(isLowerCase("hola"));
+
+  if (isLowerCase(textoIntroducido)) {
+    console.log("El texto introducido cumple con la instrucción")
+  } else {
+    console.log("INTRODUCE SOLO LETRAS MINÚSCULAS")
+  }
+}
+
 
         
