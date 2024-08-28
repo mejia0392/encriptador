@@ -8,7 +8,10 @@ function encriptar() {
     let textoRecibido = document.getElementById("texto_recibido").value;
     console.log(textoRecibido);
 
-    for (let i = 0; i < textoRecibido.length; i++) {
+    let esValido = validarTexto(textoRecibido);
+
+    if (esValido) {
+      for (let i = 0; i < textoRecibido.length; i++) {
         console.log(textoRecibido[i]);
 
         switch (textoRecibido[i]) {
@@ -43,13 +46,28 @@ function encriptar() {
     palabraEncriptada = "";
     let valorCaja = document.querySelector("#texto_recibido");
     valorCaja.value ="";
+    let mensajeValido = document.querySelector("#texto_advertencia");
+    mensajeValido.innerHTML = "Introduce un texto en minúsculas. ¡No uses tildes ni caracteres especiales!";
+    document.getElementById("texto_advertencia").style.color = "#cdeae5";
+
+    } else {
+      mensajeNoValido = document.querySelector("#texto_advertencia");
+      mensajeNoValido.innerHTML = "Por favor introduce un texto en minúsculas y sin caracteres especiales o números";
+      document.getElementById("texto_advertencia").style.color = "#e63946";
+      console.log("INTRODUCE SOLO LETRAS MINÚSCULAS");
+    }
+
+    
 }
 
 function desencriptar(){
     let textoRecibido = document.getElementById("texto_recibido").value;
     console.log(textoRecibido);
 
-    palabraDesencriptada = textoRecibido.replace(/ai/g, "a").replace(/ober/g, "o").
+    let esValido = validarTexto(textoRecibido);
+
+    if (esValido) {
+      palabraDesencriptada = textoRecibido.replace(/ai/g, "a").replace(/ober/g, "o").
     replace(/enter/g, "e").replace(/imes/g, "i").replace(/ufat/g, "o");
     console.log(palabraDesencriptada);
     
@@ -60,6 +78,18 @@ function desencriptar(){
 
     let valorCaja = document.querySelector("#texto_recibido");
     valorCaja.value ="";
+
+    let mensajeValido = document.querySelector("#texto_advertencia");
+    mensajeValido.innerHTML = "Introduce un texto en minúsculas. ¡No uses tildes ni caracteres especiales!";
+    document.getElementById("texto_advertencia").style.color = "#cdeae5";
+    
+    } else {
+      mensajeNoValido = document.querySelector("#texto_advertencia");
+      mensajeNoValido.innerHTML = "Por favor introduce un texto en minúsculas y sin caracteres especiales o números";
+      document.getElementById("texto_advertencia").style.color = "#e63946";
+      console.log("INTRODUCE SOLO LETRAS MINÚSCULAS");
+    }
+    
 }
 
 function copiarTexto() {
@@ -69,22 +99,13 @@ function copiarTexto() {
     alert('Contenido copiado en el portapapeles');
 }
 
-function validarTexto () {
-  const textoIntroducido = 'Hola';
-
-
-  console.log(textoIntroducido)
-
+function validarTexto (texto) {
+  const textoIntroducido = texto;
   const isLowerCase = textoIntroducido => /^(?=[a-z])[a-z\s]+$/.test(textoIntroducido);
 
-  console.log(isLowerCase("hola"));
-
   if (isLowerCase(textoIntroducido)) {
-    console.log("El texto introducido cumple con la instrucción")
+    return true;
   } else {
-    console.log("INTRODUCE SOLO LETRAS MINÚSCULAS")
+    return false;
   }
-}
-
-
-        
+}      

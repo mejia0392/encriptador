@@ -42,7 +42,7 @@ body {
   .texto_advertencia {
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
-    color: #1d3557;
+    color:#cdeae5;
     padding: 2px;
     margin: 0%;
   }
@@ -71,7 +71,7 @@ body {
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: #a8dadc;
     text-decoration: none;
     border: 2px solid #457b9d;
@@ -91,7 +91,7 @@ body {
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: #e63946;
     text-decoration: none;
     border: 2px solid #457b9d;
@@ -103,7 +103,7 @@ body {
   }
 
   .inserta_texto {
-    width: 400px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -148,7 +148,7 @@ body {
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: #cdeae5;
     text-decoration: none;
     border: 2px solid #457b9d;
@@ -161,18 +161,68 @@ body {
   }
 
   ::placeholder {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 
   textarea {
     font-family: "Noto Sans", sans-serif;
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 
   #muestra_texto {
     font-family: "Noto Sans", sans-serif;
-    font-size: 20px;
+    font-size: 1.5rem;
     height: 100%;
     margin: 0%;
     color: #000;
   }
+
+  @media (max-width: 768px) {
+    .principal {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .muestra_texto {
+      height: 250px;
+      border-radius: 10px;
+      background-color:#457b9d;
+      width: 700px;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 4px;
+    }
+    .inserta_texto {
+      width: 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  @media (max-width: 376px) {
+    .principal {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .muestra_texto {
+      height: 200px;
+      border-radius: 10px;
+      background-color:#457b9d;
+      width: 320px;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 4px;
+    }
+    .inserta_texto {
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    }
