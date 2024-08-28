@@ -103,7 +103,7 @@ body {
   }
 
   .inserta_texto {
-    width: 600px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -127,6 +127,12 @@ body {
     border-radius: 10px;
     resize: none;
     padding: 0%;
+  }
+
+  .foto_tomas_y_mili {
+    height: 20%;
+    width: 20%;
+    border-radius: 200px;
   }
 
   .muestra_texto {
@@ -200,6 +206,12 @@ body {
       flex-direction: column;
       gap: 8px;
     }
+
+    .foto_tomas_y_mili {
+      height: 40%;
+      width: 40%;
+      border-radius: 200px;
+    }
   }
 
   @media (max-width: 376px) {
@@ -224,5 +236,11 @@ body {
       display: flex;
       flex-direction: column;
       gap: 8px;
+    }
+
+    .foto_tomas_y_mili {
+      height: 40%;
+      width: 40%;
+      border-radius: 200px;
     }
     }
